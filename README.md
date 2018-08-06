@@ -6,9 +6,9 @@ Matrix operations using CUDA
 
 # Contents
 
-1. [Overview][]
-2. [Tutorial][]
-3. [API][]
+1. [Overview](#overview)
+2. [Tutorial](#tutorial)
+3. [API](#api)
 
 # Overview
 
