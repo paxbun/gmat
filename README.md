@@ -1,4 +1,4 @@
-# gmat
+# Gmat
 
 Matrix operations using CUDA
 
@@ -123,6 +123,60 @@ destroy:
 
 
 # Tutorial
+
+## System Requirements
+
+* x86-64 based Windows PC
+* CUDA-capable NVIDIA GPU
+* Visual Studio 2015 or 2017
+
+## Files
+
+Download file from [link](https://github.com/paxbun/gmat/releases). After download, you will have 5 files:
+
+![1](1.png)
+
+* GMAT.dll: 
+* GMAT.lib: 
+* gmat.h: 
+* gmat.inl: 
+* gmatc.inl:
+
+## Create a new project
+
+Open visual studio, and create a new C++ Windows Console Application project by choosing [File] > [New] > [Project]. Name it **GmatPractice**.
+
+![2](2.png)
+
+## Get the project ready
+
+Right-click the project **GmatPracice** at [Solution Explorer], and choose [Properties]. Select [C/C++] > [General] and type the path of the folder where you downloaded the files in [Additional Include Directories]. Select [Linker] > [General], and type the same path in [Additional Library Directories].
+
+![3](3.png)
+
+Select [Linker] > [Input], and type "gmat.lib" in [Additional Dependencies].
+
+![4](4.png)
+
+Click [OK] to save the changes.
+
+## Manage Configuration
+
+Since Gmat does not support x86, your first Gmat program should be based on x64. Select [x86] > [Configuration manager].
+
+![5](5.png)
+
+Select [Active Solution platform] > [x86] > [Edit...].
+
+![6](6.png)
+
+Remove [x86].
+
+![7](7.png)
+
+## Create your first Gmat program
+
+Now you are ready to create your first gmat program.
 
 
 
