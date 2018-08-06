@@ -57,8 +57,5 @@
     <None Include="gmatc.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="README.md">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
