@@ -38,15 +38,15 @@
     <ClCompile Include="gmat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gmatc.cu.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="gmat.cu.cc">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+    <CudaCompile Include="gmatc.cu.cc">
       <Filter>Source Files</Filter>
     </CudaCompile>
   </ItemGroup>
@@ -56,6 +56,9 @@
     </None>
     <None Include="gmatc.inl">
       <Filter>Header Files</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

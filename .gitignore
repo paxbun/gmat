@@ -1,0 +1,11 @@
+/gmat/x64/
+/test/x64/
+/x64/
+
+*.exe
+*.dll
+*.obj
+*.log
+*.ipch
+*.db
+/.vs/gmat/v15/*

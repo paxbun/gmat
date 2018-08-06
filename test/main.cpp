@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main()
+int foo()
 {
 	try
 	{
@@ -34,6 +34,8 @@ int main()
 			}) / 5.0
 		<< endl;
 		cout << endl;
+
+
 	}
 	catch (const gmat_exception & ex)
 	{
