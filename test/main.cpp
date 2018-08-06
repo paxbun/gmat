@@ -5,17 +5,17 @@
 
 using namespace std;
 
-int foo()
+int main()
 {
 	try
 	{
 		cout << "Addition and subtraction" << endl;
 		cout << gmat({ { 1, 2, 3 } }) + gmat({ { 5, 6, 7 } }) << endl;
-		cout << gmat({ { 1, 2, 3 } }) - gmat({ { 7, 6, 5 } }) << endl;
+		cout << gmatc({ { 1_j, 2_j, 3_j } }) - gmatc({ { 7, 6, 5 } }) << endl;
 		cout << endl;
 		
 		cout << "Element multiplication and division" << endl;
-		cout << gmat({ {1, 2, 3} }) * gmat({ {5, 6, 7} }) << endl;
+		cout << gmatc({ {1, 2, 3} }) * gmatc({ {5, 6, 7} }) << endl;
 		cout << gmat({ {1, 2, 3} }) / gmat({ {5, 6, 7} }) << endl;
 		cout << endl;
 

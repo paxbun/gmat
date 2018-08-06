@@ -8,7 +8,7 @@ Matrix operations using CUDA
 
 1. [Overview](#overview)
 2. [Tutorial](#tutorial)
-3. [API](#api)
+3. [Hack Gmat](#hack-gmat)
 
 # Overview
 
@@ -26,10 +26,10 @@ int main()
     {	
         // {{ 6, 8, 10, }}
         cout << gmat({ { 1, 2, 3 } }) + gmat({ { 5, 6, 7 } }) << endl;
-        // {{ -6, -4, -2, }}
-        cout << gmat({ { 1, 2, 3 } }) - gmat({ { 7, 6, 5 } }) << endl;
-        // {{ 5, 12, 21, }}
-        cout << gmat({ { 1, 2, 3 } }) * gmat({ { 5, 6, 7 } }) << endl;
+        // {{ -6+0j, -4+0j, -2+0j, }}
+        cout << gmatc({ { 1, 2, 3 } }) - gmatc({ { 7, 6, 5 } }) << endl;
+        // {{ 0+5j, 0+12j, 0+21j, }}
+        cout << gmatc({ { 1_j, 2_j, 3_j } }) * gmatc({ { 5, 6, 7 } }) << endl;
         // {{ 0.2, 0.333333, 0.428571, }}
         cout << gmat({ { 1, 2, 3 } }) / gmat({ { 5, 6, 7 } }) << endl;
         // {{ 14, 16, 18, },
@@ -136,48 +136,77 @@ Download file from [link](https://github.com/paxbun/gmat/releases). After downlo
 
 ![1](1.png)
 
-* GMAT.dll: 
-* GMAT.lib: 
-* gmat.h: 
-* gmat.inl: 
-* gmatc.inl:
-
 ## Create a new project
 
-Open visual studio, and create a new C++ Windows Console Application project by choosing [File] > [New] > [Project]. Name it **GmatPractice**.
+Open visual studio, and create a new C++ Windows Console Application project by choosing **File** > **New** > **Project**. Name it **GmatPractice**.
 
 ![2](2.png)
 
 ## Get the project ready
 
-Right-click the project **GmatPracice** at [Solution Explorer], and choose [Properties]. Select [C/C++] > [General] and type the path of the folder where you downloaded the files in [Additional Include Directories]. Select [Linker] > [General], and type the same path in [Additional Library Directories].
+Right-click the project **GmatPracice** at **Solution Explorer**, and choose **Properties**. Select **C/C++** > **General** and type the path of the folder where you downloaded the files in **Additional Include Directories**. Select **Linker** > **General**, and type the same path in **Additional Library Directories**.
 
 ![3](3.png)
 
-Select [Linker] > [Input], and type "gmat.lib" in [Additional Dependencies].
+Select **Linker** > **Input**, and type "gmat.lib" in **Additional Dependencies**.
 
 ![4](4.png)
 
-Click [OK] to save the changes.
+Click **OK** to save the changes.
 
 ## Manage Configuration
 
-Since Gmat does not support x86, your first Gmat program should be based on x64. Select [x86] > [Configuration manager].
+Since Gmat does not support x86, your first Gmat program should be based on x64. Select **x86** > **Configuration manager**.
 
 ![5](5.png)
 
-Select [Active Solution platform] > [x86] > [Edit...].
+Select **Active Solution platform** > **x86** > **Edit...**.
 
 ![6](6.png)
 
-Remove [x86].
+Remove **x86**.
 
 ![7](7.png)
 
 ## Create your first Gmat program
 
-Now you are ready to create your first gmat program.
+Open **stdafx.h**, and type as follows:
+```c++
+#include <gmat.h>
+```
+Now you are ready to create your first gmat program. Open **GmatPratice.h**. What we are going to make is a program which performs Multiplication of 3x2 and 2x3 matrix. The operation yields a 3x3 matrix. At the body of **main**, we create two matrix.
+```c++
+try {
+    gmat const mat0({
+        { 1, 2 },
+        { 3, 4 },
+        { 5, 6 }
+    });
+    gmat const mat1({
+        { 1, 2, 3 },
+        { 4, 5, 6 },
+    });
+```
+Since Gmat has adapted **Exception handling**, you should surround your matrix operations by try-catch statement. We now calculate the product and print the result.
+```c++
+    std::cout << mat0 % mat1 << std::endl;
+}
+catch (const gmat_exception & ex)
+{
+    std::cout << ex.what() << std::endl;
+}
+```
+Note that **operator\%** means matrix multiplication in the default implementation. **operator\*** does the following operation:
+$$
+    C_{ij} = A_{ij} \times B_{ij}
+$$
+where C is the result, and A and B are the operand. This is the same with **operator\/**.
 
 
+# Hack Gmat
 
-# API
+You may have noticed that there are two more files, **gmat.inl** and **gmatc.inl**. The core part of Gmat has C linkage, and the class **gmat** and **gmatc** are just wrappers. You can implement your own C++ class by editing **gmat.inl** and **gmatc.inl**. These two files are used in **gmat.h** as follows:
+```c++
+#include "gmat.inl"
+#include "gmatc.inl"
+```
