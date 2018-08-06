@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmat", "gmat\gmat.vcxproj", "{F9FB122C-3DE0-4D8E-8974-68E48C22BEB4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{DAB51DC1-9A3C-495F-B73D-995F65CCE650}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9FB122C-3DE0-4D8E-8974-68E48C22BEB4}.Debug|x64.ActiveCfg = Debug|x64
+		{F9FB122C-3DE0-4D8E-8974-68E48C22BEB4}.Debug|x64.Build.0 = Debug|x64
+		{F9FB122C-3DE0-4D8E-8974-68E48C22BEB4}.Release|x64.ActiveCfg = Release|x64
+		{F9FB122C-3DE0-4D8E-8974-68E48C22BEB4}.Release|x64.Build.0 = Release|x64
+		{DAB51DC1-9A3C-495F-B73D-995F65CCE650}.Debug|x64.ActiveCfg = Debug|x64
+		{DAB51DC1-9A3C-495F-B73D-995F65CCE650}.Debug|x64.Build.0 = Debug|x64
+		{DAB51DC1-9A3C-495F-B73D-995F65CCE650}.Release|x64.ActiveCfg = Release|x64
+		{DAB51DC1-9A3C-495F-B73D-995F65CCE650}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {285F952F-E9AD-44C9-9F2D-2CF98FC6BA20}
+	EndGlobalSection
+EndGlobal
