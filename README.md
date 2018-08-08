@@ -132,7 +132,7 @@ destroy:
 
 ## Files
 
-Download file from [link](https://github.com/paxbun/gmat/releases). After download, you will have 5 files:
+Download files from [link](https://github.com/paxbun/gmat/releases). After download, you will have 5 files:
 
 ![1](1.png)
 
