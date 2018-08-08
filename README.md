@@ -22,7 +22,7 @@ using namespace std;
 
 int main()
 {
-	try
+    try
     {	
         // {{ 6, 8, 10, }}
         cout << gmat({ { 1, 2, 3 } }) + gmat({ { 5, 6, 7 } }) << endl;
@@ -174,7 +174,7 @@ Open **stdafx.h**, and type as follows:
 ```c++
 #include <gmat.h>
 ```
-Now you are ready to create your first gmat program. Open **GmatPratice.h**. What we are going to make is a program which performs Multiplication of 3x2 and 2x3 matrix. The operation yields a 3x3 matrix. At the body of **main**, we create two matrix.
+Now you are ready to create your first gmat program. Open **GmatPratice.h**. What we are going to make is a program which performs multiplication of 3x2 and 2x3 matrix. The operation yields a 3x3 matrix. At the body of **main**, we create two matrix.
 ```c++
 try {
     gmat const mat0({
