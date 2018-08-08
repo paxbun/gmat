@@ -134,23 +134,23 @@ destroy:
 
 Download files from [link](https://github.com/paxbun/gmat/releases). After download, you will have 5 files:
 
-![1](1.png)
+![1](tutorials/1.png)
 
 ## Create a new project
 
 Open visual studio, and create a new C++ Windows Console Application project by choosing **File** > **New** > **Project**. Name it **GmatPractice**.
 
-![2](2.png)
+![2](tutorials/2.png)
 
 ## Get the project ready
 
 Right-click the project **GmatPracice** at **Solution Explorer**, and choose **Properties**. Select **C/C++** > **General** and type the path of the folder where you downloaded the files in **Additional Include Directories**. Select **Linker** > **General**, and type the same path in **Additional Library Directories**.
 
-![3](3.png)
+![3](tutorials/3.png)
 
 Select **Linker** > **Input**, and type "gmat.lib" in **Additional Dependencies**.
 
-![4](4.png)
+![4](tutorials/4.png)
 
 Click **OK** to save the changes.
 
@@ -158,15 +158,15 @@ Click **OK** to save the changes.
 
 Since Gmat does not support x86, your first Gmat program should be based on x64. Select **x86** > **Configuration manager**.
 
-![5](5.png)
+![5](tutorials/5.png)
 
 Select **Active Solution platform** > **x86** > **Edit...**.
 
-![6](6.png)
+![6](tutorials/6.png)
 
 Remove **x86**.
 
-![7](7.png)
+![7](tutorials/7.png)
 
 ## Create your first Gmat program
 
@@ -198,7 +198,7 @@ catch (const gmat_exception & ex)
 ```
 Note that **operator\%** means matrix multiplication in the default implementation. **operator\*** does the following operation:
 $$
-    C_{ij} = A_{ij} \times B_{ij}
+C_{ij} = A_{ij} \times B_{ij}
 $$
 where C is the result, and A and B are the operand. This is the same with **operator\/**.
 
