@@ -244,6 +244,8 @@ GMAT_API gmat_error_t gmat_product(gmat * res, const gmat * mat0, const gmat * m
 
 	CHECK_CUDA(cudaGetLastError(), cudaFree(buf));
 
+	cudaFree(buf);
+
 	return gmat_success;
 }
 
