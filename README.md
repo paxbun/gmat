@@ -196,11 +196,7 @@ catch (const gmat_exception & ex)
     std::cout << ex.what() << std::endl;
 }
 ```
-Note that **operator\%** means matrix multiplication in the default implementation. **operator\*** does the following operation:
-$$
-C_{ij} = A_{ij} \times B_{ij}
-$$
-where C is the result, and A and B are the operand. This is the same with **operator\/**.
+Note that **operator\%** means matrix multiplication in the default implementation. **operator\*** is convolution operator. This is the same with **operator\/**.
 
 
 # Hack Gmat
