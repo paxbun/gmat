@@ -445,7 +445,7 @@ inline std::basic_ostream<T> & operator<<(std::basic_ostream<T> & o, const gmatc
 		}
 		o << "},";
 		if (i != height - 1)
-			o << endl;
+			o << std::endl;
 	}
 	return o;
 }
