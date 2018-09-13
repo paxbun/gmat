@@ -381,7 +381,7 @@ inline std::basic_ostream<T> & operator<<(std::basic_ostream<T> & o, const gmat 
 		}
 		o << '}';
 		if (i != height - 1)
-			o << ',' << endl;
+			o << ',' << std::endl;
 	}
 	o << '}';
 	return o;
